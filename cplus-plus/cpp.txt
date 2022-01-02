@@ -1,0 +1,129 @@
+1.VECTOR
+----------
+vector<int> v(n) : n is the size of vector
+vector<int> v(n,0) : vector of size n init with 0
+v.size() : returns the size of vec
+v.capacity() : returns the capacity of vec
+v.pop_back() : deletes the last ele
+v.push_back() : Adds the ele at last
+v.clear() : clears the vec and make size 0 and cap remains same
+v.erase(v.begin(),v.end())
+v.erase(v.begin()) delete only begining ele
+here it accepts only it-----
+v.front()
+v.resize(x) : Now the size of vec is x && cap is x if x > n else cap will remain n if x<n
+v.shrink_to_fit() cap becomes x if x<n
+v.reverse(v.begin(),v.end())
+v.empty() : returns if the vec is empty or not
+
+2.STRING
+---------
+string s;
+string s2(s) : s2==s
+Don't use cin
+Use getline(cin,s) 
+s+='A'
+s+="xyz";
+s.append('x')
+s.append("xyz")
+--------------------
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define int64_t int
+int main(){
+	
+	string s="I LOVE YOU";
+	char * cstring = new char [s.length()+1];
+	strcpy(cstring,s.c_str());
+	char * ptr=strtok(cstring," ");
+	while(ptr){
+		cout<<ptr<<endl;
+		ptr=strtok(NULL," ");
+	}
+}
+-----------------------------
+
+s.erase(idx,lengthOfdeletion)
+s.erase(idx) deletes from the o based idx to end
+s.find(string &s) returns the idx
+s.length()
+s.substr(idx,lenghtofsubstr)
+s.substr(idx) from idx to end
+s.push_back()
+s.pop_back()
+s.empty()
+s.front()
+to_string(int)
+stoi(string_name, NULL) : will convert string to int
+-------------------------------------
+
+3.Deque
+-------
+d.push_back(x)
+d.pop_back()
+d.empty()
+d.front()
+d[]
+d.push_front()
+d.pop_front()
+d.size()
+
+4.Queue
+-------
+push() adds ele to last
+pop()  deletes front
+empty() check empty or not
+size()
+
+5. Stack
+---------
+s.push(x)
+s.pop() del. the last ele
+s.size()
+s.empty()
+s.top()
+
+6. Priority_queue
+priority_queue<int> pq :Max heap
+pq.empty()
+pq.size()
+pq.top() returns max ele
+pq.push()
+pq.pop() del max ele
+
+priority_queue<data_type,vector<data_type>,greater<data_type>> pq; Min heap
+
+
+7. List
+--------
+l.sort()
+l.reverse()
+l.push_back()
+l.pop_back()
+l.insert()
+l.pop_front()
+l.push_front()
+l.front()
+l.size()
+l.back()
+
+8. Map
+-------
+Map contains only unique key
+contains key in sorted order
+map<int,int> m
+m[key]=value
+m.insert({key,value})
+m.clear()
+m.count(key)
+m.find(key)
+m.erase(pointer to idx1, pointer to idx2)
+
+9. Multimap
+-----------
+it just containse multiple key
+
+And same in all the other remaining set,multiset and its unordered variation
+
+
