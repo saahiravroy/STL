@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define int64_t int
+int main(){
+	
+	int n;cin>>n;
+	int arr[n];
+	for(int i=0;i<n;i++)cin>>arr[n];
+	int key;cin>>key;
+	bool present = binary_search(arr,arr+n,key);
+	if(present)cout<<"present"<<endl;
+	else cout<<"not present"<<endl;
+
+
+	auto lb = lower_bound(arr,arr+n,key);
+	//lower_bound returns the address of the ele which is greater than or equal to the key
+	cout<<"Lower bound : "<<(lb-arr)<<endl;
+
+	auto up=upper_bound(arr,arr+n,key);
+	//upper_bound returns the address of the ele which is strictly greater than key element
+
+	return 0;
+
+}
